@@ -54,8 +54,8 @@ a git tag for the version, push git commits and tags, and push the
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/[USERNAME]/csp_builder. This project is intended to
-be a safe, welcoming space for collaboration, and contributors are
+https://github.com/[SimplyBuilt]/csp_builder. This project is intended
+to be a safe, welcoming space for collaboration, and contributors are
 expected to adhere to the [Contributor
 Covenant](http://contributor-covenant.org) code of conduct.
 
