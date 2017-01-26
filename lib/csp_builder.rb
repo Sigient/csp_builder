@@ -40,6 +40,7 @@ class CspBuilder
   end
 
   # @!macro [new] method_doc
+  #   Generated method
   #   @param values [Array<String, Symbol>] one or more value; Symbol's are wrapped in single quotes
   #   @return [CspBuilder] self
 
