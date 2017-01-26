@@ -1,7 +1,10 @@
 # CspBuilder
 
+[![Travis Build Status](https://travis-ci.org/SimplyBuilt/csp_builder.svg)](https://travis-ci.org/SimplyBuilt/csp_builder)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 Content Security Policy string builder. Create rich Content Security
-Policies using this easy to use builder class.
+Policies headers using this easy to use builder class.
 
 ## Installation
 
@@ -39,6 +42,8 @@ csp = CspBuilder.new.
 csp.compile!
 ```
 
+More examples using middleware and controllers coming soon!
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
@@ -54,7 +59,7 @@ a git tag for the version, push git commits and tags, and push the
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/[SimplyBuilt]/csp_builder. This project is intended
+https://github.com/SimplyBuilt/csp_builder. This project is intended
 to be a safe, welcoming space for collaboration, and contributors are
 expected to adhere to the [Contributor
 Covenant](http://contributor-covenant.org) code of conduct.

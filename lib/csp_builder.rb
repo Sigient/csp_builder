@@ -17,22 +17,23 @@ require 'csp_builder/constants'
 #   # "script-src https://*.cloudfront.net 'self'; style-src https://*.cloudfront.net; img-src *; frame-ancestors 'self'; upgrade-insecure-requests"
 #   csp.compile!
 class CspBuilder
-  # Final result string. This is set when +compile!+ is called
+  # Final result string. This is set by +compile!+
   attr_reader :result
 
   # Returns a new instance of +CspBuilder+
   def initialize
     @directives = {}
+    @result     = nil
   end
 
-  # Returns whether the result has been compiled yet
+  # Returns whether the result has been compiled or not
   # @return [Boolean]
   def compiled?
     !@result.nil?
   end
 
-  # Compile CSP string
-  # @return [String] resulting CSP string
+  # Compile Content Security Policy with all of the defined directives
+  # @return [String] compiled CSP string
   def compile!
     @directives.freeze unless @directives.frozen?
 
@@ -41,7 +42,7 @@ class CspBuilder
 
   # @!macro [new] method_doc
   #   Generated method
-  #   @param values [Array<String, Symbol>] one or more value; Symbol's are wrapped in single quotes
+  #   @param values [Array<String, Symbol>] one or more value; Symbols are wrapped in single quotes
   #   @return [CspBuilder] self
 
   # @!method child_src(*values)
