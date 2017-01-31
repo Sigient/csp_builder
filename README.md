@@ -1,6 +1,6 @@
 # CspBuilder
 
-[![Travis Build Status](https://travis-ci.org/SimplyBuilt/csp_builder.svg)](https://travis-ci.org/SimplyBuilt/csp_builder)
+[![Travis Build Status](https://travis-ci.org/Sigient/csp_builder.svg)](https://travis-ci.org/Sigient/csp_builder)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 Content Security Policy string builder. Create rich Content Security
@@ -25,7 +25,7 @@ Or install it yourself as:
 ## Usage
 
 Here is a quick example. Please see the
-[docs](http://www.rubydoc.info/github/SimplyBuilt/csp_builder) for more
+[docs](http://www.rubydoc.info/github/Sigient/csp_builder) for more
 details!
 
 
@@ -59,7 +59,7 @@ a git tag for the version, push git commits and tags, and push the
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/SimplyBuilt/csp_builder. This project is intended
+https://github.com/Sigient/csp_builder. This project is intended
 to be a safe, welcoming space for collaboration, and contributors are
 expected to adhere to the [Contributor
 Covenant](http://contributor-covenant.org) code of conduct.
