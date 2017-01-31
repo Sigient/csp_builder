@@ -6,12 +6,12 @@ require 'csp_builder/version'
 Gem::Specification.new do |spec|
   spec.name          = 'csp_builder'
   spec.version       = CspBuilder::VERSION
-  spec.authors       = ['Michael Coyne', 'SimplyBuilt']
+  spec.authors       = ['Michael Coyne', 'Sigient']
   spec.email         = ['mikeycgto@gmail.com']
 
   spec.summary       = 'Content Security Policy string builder'
   spec.description   = 'Create rich Content Security Policies using this easy to use builder class'
-  spec.homepage      = 'https://github.com/SimplyBuilt/csp_builder'
+  spec.homepage      = 'https://github.com/Sigient/csp_builder'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
