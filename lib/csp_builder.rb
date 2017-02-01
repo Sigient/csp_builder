@@ -115,7 +115,18 @@ class CspBuilder
     RUBY_EVAL
   end
 
+  protected
+
+  def reset!
+    @directives = @directives.dup
+    @result     = nil
+  end
+
   private
+
+  def initialize_dup(source)
+    super.reset!
+  end
 
   # @private
   def compile

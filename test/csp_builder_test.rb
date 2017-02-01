@@ -78,4 +78,28 @@ class CspBuilderTest < Minitest::Test
   test 'compiled? after compiling' do
     assert_equal true, CspBuilder.new.tap(&:compile!).compiled?
   end
+
+  test 'dup compiled instance has unfrozen directive' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    assert_equal false, csp.dup.compiled?
+  end
+
+  test 'dup compiled instance has nil result' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    assert_nil csp.dup.result
+  end
+
+  test 'dup compiled instance returns uncompiled instance' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    dup = csp.dup
+    dup.script_src(:none)
+
+    assert_equal "default-src 'self'; script-src 'none'", dup.compile!
+  end
 end
