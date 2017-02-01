@@ -49,6 +49,13 @@ class CspBuilderTest < Minitest::Test
       csp.compile!)
   end
 
+  test 'directive method with nil' do
+    csp = CspBuilder.new.
+      default_src(nil)
+
+    assert_equal 'default-src ', csp.compile!
+  end
+
   test 'compile! returns result' do
     csp = CspBuilder.new.default_src(:self)
 
