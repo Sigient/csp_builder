@@ -129,7 +129,7 @@ class CspBuilder
     if Symbol === value
       value = "'#{value}'"
     else
-      value = value.dup
+      value = value.to_s.dup
     end
 
     if @directives.has_key? key
