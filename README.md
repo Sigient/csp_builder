@@ -1,6 +1,7 @@
 # CspBuilder
 
 [![Travis Build Status](https://travis-ci.org/Sigient/csp_builder.svg)](https://travis-ci.org/Sigient/csp_builder)
+[![Gem Version](https://badge.fury.io/rb/csp_builder.svg)](https://badge.fury.io/rb/csp_builder)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 Content Security Policy string builder. Create rich Content Security
