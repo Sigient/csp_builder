@@ -117,6 +117,7 @@ class CspBuilder
 
   protected
 
+  # @private
   def reset!
     @directives = @directives.dup
     @result     = nil
@@ -124,6 +125,7 @@ class CspBuilder
 
   private
 
+  # @private
   def initialize_dup(source)
     super.reset!
   end
