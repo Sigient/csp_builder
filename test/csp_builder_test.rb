@@ -79,21 +79,21 @@ class CspBuilderTest < Minitest::Test
     assert_equal true, CspBuilder.new.tap(&:compile!).compiled?
   end
 
-  test 'dup compiled instance has unfrozen directive' do
+  test 'dup compiled instance is not compiled?' do
     csp = CspBuilder.new.default_src(:self)
     csp.compile!
 
     assert_equal false, csp.dup.compiled?
   end
 
-  test 'dup compiled instance has nil result' do
+  test 'dup compiled instance has no result' do
     csp = CspBuilder.new.default_src(:self)
     csp.compile!
 
     assert_nil csp.dup.result
   end
 
-  test 'dup compiled instance returns uncompiled instance' do
+  test 'dup compiled instance can add directives' do
     csp = CspBuilder.new.default_src(:self)
     csp.compile!
 
@@ -101,5 +101,29 @@ class CspBuilderTest < Minitest::Test
     dup.script_src(:none)
 
     assert_equal "default-src 'self'; script-src 'none'", dup.compile!
+  end
+
+  test 'clone compiled instance is still compiled?' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    assert_equal true, csp.clone.compiled?
+  end
+
+  test 'clone compiled instance has result' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    refute_nil csp.clone.result
+  end
+
+  test 'clone compiled instance cannot add directives' do
+    csp = CspBuilder.new.default_src(:self)
+    csp.compile!
+
+    assert_raises RuntimeError do
+      dup = csp.clone
+      dup.script_src(:none)
+    end
   end
 end
